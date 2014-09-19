@@ -6,11 +6,46 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.main.imagedownloader.MainActivity" >
+    tools:context="com.example.filedownloader.MainActivity" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/head"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="Download Address" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/head"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/textUrl"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:hint="url address"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/buttonSend"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_below="@+id/layout" />
 
 </RelativeLayout>
